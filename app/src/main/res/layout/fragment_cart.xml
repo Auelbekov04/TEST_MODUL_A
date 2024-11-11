@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Заголовок корзины с кнопкой очистки -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Корзина"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/clearCartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Очистить корзину"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Список товаров в корзине -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Общая стоимость и кнопка оформления заказа -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:id="@+id/totalPriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Итого: 0 ₸"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/checkoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оформить заказ"
+            android:backgroundTint="@color/primaryColor"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>
